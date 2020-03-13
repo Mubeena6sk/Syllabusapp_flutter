@@ -1,0 +1,699 @@
+import 'package:flutter/material.dart';
+import 'package:info_app/subs/subjects';
+
+class Mme1sem1 extends StatefulWidget {
+  @override
+  Mme1sem1State createState() => Mme1sem1State();
+}
+class Mme1sem1State extends State<Mme1sem1> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: mm1s1.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            GestureDetector(
+              child: Text(name.sname, style: TextStyle(decoration: TextDecoration.underline, color: Colors.brown)),
+              onTap: () {
+                if(name.sname=='Programming in C') {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => C()),
+                  );
+                }
+                else if(name.sname=='Chemistry')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Chem()),
+                  );
+                }
+                else if(name.sname=='Mathematics-1')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => M1()),
+                  );
+                }
+                else if(name.sname=='English')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Eng()),
+                  );
+                }
+                else if(name.sname=='Engineering Mechanics-I')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Em1()),
+                  );
+                }
+                else if(name.sname=='Communication Skills-I')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Cs1()),
+                  );
+                }
+                else if(name.sname=='Programming in C Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Clab()),
+                  );
+                }
+                else if(name.sname=='English Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Englab()),
+                  );
+                }
+                else
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Chemlab()),
+                  );
+                }
+              },
+            ),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("mme:year1:sem1"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Mme1sem2 extends StatefulWidget {
+  @override
+  Mme1sem2State createState() => Mme1sem2State();
+}
+class Mme1sem2State extends State<Mme1sem2> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: mm1s2.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            Text(name.sname),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("mme:year1:sem2"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Mme2sem1 extends StatefulWidget {
+  @override
+  Mme2sem1State createState() => Mme2sem1State();
+}
+class Mme2sem1State extends State<Mme2sem1> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: mm2s1.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            GestureDetector(
+              child: Text(name.sname, style: TextStyle(decoration: TextDecoration.underline, color: Colors.brown)),
+              onTap: () {
+                if(name.sname=='Physical Metallurgy')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Pm()),
+                  );
+                }
+                else if(name.sname=='Mineral Processing')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Mp()),
+                  );
+                }
+                else if(name.sname=='Metallurgical Thermodynamics')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Mt()),
+                  );
+                }
+                else if(name.sname=='Foundry Technology')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Ft()),
+                  );
+                }
+                else if(name.sname=='Environmental Science')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Es()),
+                  );
+                }
+                else if(name.sname=='Soft Skills - 1')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Ss1()),
+                  );
+                }
+                else if(name.sname=='Physical Metallurgy Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Pmlab()),
+                  );
+                }
+                else if(name.sname=='Foundry Technology Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Ftlab()),
+                  );
+                }
+                else
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Seminar1()),
+                  );
+                }
+              },
+            ),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("mme:year2:sem1"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Mme2sem2 extends StatefulWidget {
+  @override
+  Mme2sem2State createState() => Mme2sem2State();
+}
+class Mme2sem2State extends State<Mme2sem2> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: mm2s2.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            Text(name.sname),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("mme:year2:sem2"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Mme3sem1 extends StatefulWidget {
+  @override
+  Mme3sem1State createState() => Mme3sem1State();
+}
+class Mme3sem1State extends State<Mme3sem1> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: mm3s1.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            GestureDetector(
+              child: Text(name.sname, style: TextStyle(decoration: TextDecoration.underline, color: Colors.brown)),
+              onTap: () {
+                if(name.sname=='Mechanical Working Of Materials')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Mwm()),
+                  );
+                }
+
+                else if(name.sname=='Steel Making')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Sm()),
+                  );
+                }
+                else if(name.sname=='Heat treatment')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Ht()),
+                  );
+                }
+                else if(name.sname=='Polymer Engineering and Technology')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Pet()),
+                  );
+                }
+                else if(name.sname=='Composite Materials and Processing')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Cmp()),
+                  );
+                }
+                else if(name.sname=='Personality Development')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Pd()),
+                  );
+                }
+                else if(name.sname=='Mechanical Working Of Materials lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Mwmlab()),
+                  );
+                }
+                else if(name.sname=='Heat treatment Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Htlab()),
+                  );
+                }
+                else
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Seminar2()),
+                  );
+                }
+              },
+            ),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("mme:year3:sem1"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Mme3sem2 extends StatefulWidget {
+  @override
+  Mme3sem2State createState() => Mme3sem2State();
+}
+class Mme3sem2State extends State<Mme3sem2> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: mm3s2.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            Text(name.sname),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("mme:year3:sem2"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Mme4sem1 extends StatefulWidget {
+  @override
+  Mme4sem1State createState() => Mme4sem1State();
+}
+class Mme4sem1State extends State<Mme4sem1> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: mm4s1.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            GestureDetector(
+              child: Text(name.sname, style: TextStyle(decoration: TextDecoration.underline, color: Colors.brown)),
+              onTap: () {
+                if(name.sname=='Fracture Mechanics')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Fm()),
+                  );
+                }
+                else if(name.sname=='X-Ray Powder Diffraction')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Xpd()),
+                  );
+                }
+                else if(name.sname=='Managerial Economics and Financial Analysis')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Mefa()),
+                  );
+                }
+                else
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => project()),
+                  );
+                }
+
+              },
+            ),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("mme:year4:sem1"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Mme4sem2 extends StatefulWidget {
+  @override
+  Mme4sem2State createState() => Mme4sem2State();
+}
+class Mme4sem2State extends State<Mme4sem2> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: mm4s2.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            Text(name.sname),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("mme:year4:sem2"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+class Mm1s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  Mm1s1({this.cno, this.sname, this.credits});
+}
+var mm1s1=< Mm1s1>[
+  Mm1s1(cno:'MA1101',sname: 'Mathematics -I',credits:'4'),
+  Mm1s1(cno:'ME1101',sname: 'Engineering Mechanics-I',credits:'4'),
+  Mm1s1(cno:'HS1001',sname: 'English',credits: '3'),
+  Mm1s1(cno:'CY1001',sname: 'Chemistry',credits:'4'),
+  Mm1s1(cno:'CS1101',sname: 'Programming in C',credits:'4'),
+  Mm1s1(cno:'HS1101',sname: 'Communication Skills-I',credits: '1'),
+  Mm1s1(cno:'HS1601',sname: 'English Lab',credits:'2'),
+  Mm1s1(cno:'CY1601',sname: 'Engineering Chemistry Lab',credits:'2'),
+  Mm1s1(cno:'CS1701',sname: 'Programming in C Lab',credits: '2'),
+
+];
+class Mm1s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  Mm1s2({this.cno, this.sname, this.credits});
+}
+var mm1s2=< Mm1s2>[
+  Mm1s2(cno:'MA1202',sname: 'Mathematics -2',credits:'4'),
+  Mm1s2(cno:'CY1201 /PH1201',sname: 'Chemistry/(Physics)',credits:'4'),
+  Mm1s2(cno:'ME1201 /HS1201',sname: 'Mechanics/(English)',credits: '3'),
+  Mm1s2(cno:'CS1201 /EE1201',sname: 'Programming & Data structures/Electrical Technology',credits:'4'),
+  Mm1s2(cno:'CE1201 /ME1202',sname: 'Engg.Drawing & Graphics/Intro.to Manufact.Proc & WSP)',credits:'3'),
+  Mm1s2(cno:'CY1801/PH1801',sname: 'Chemistry Lab/Physics Lab',credits: '2'),
+  Mm1s2(cno:'CS1801/EE1801',sname: 'Programming & Data Struct Lab/Electrical Technology Lab',credits:'2'),
+  Mm1s2(cno:'EA1801',sname: 'Extra Acad Activity-2',credits:'P/R'),
+];
+class Mm2s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  Mm2s1({this.cno, this.sname, this.credits});
+}
+var mm2s1=< Mm2s1>[
+  Mm2s1(cno:'MM2101',sname: 'Physical Metallurgy',credits:'4'),
+  Mm2s1(cno:'MM2102',sname: 'Mineral Processing',credits:'4'),
+  Mm2s1(cno:'MM2103',sname: 'Metallurgical Thermodynamics',credits: '4'),
+  Mm2s1(cno:'MM2104',sname: 'Foundry Technology',credits:'4'),
+  Mm2s1(cno:'BSBE2001/3001',sname: 'Environmental Science',credits:'3'),
+  Mm2s1(cno:'HS2101',sname: 'Soft Skills - I',credits: '1'),
+  Mm2s1(cno:'MM2701',sname: 'Physical Metallurgy Lab',credits:'2'),
+  Mm2s1(cno:'MM2702',sname: 'Foundry Technology Lab',credits:'2'),
+  Mm2s1(cno:'MM2901',sname: 'Seminar - I',credits: '1'),
+
+];
+class Mm2s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  Mm2s2({this.cno, this.sname, this.credits});
+}
+var mm2s2=< Mm2s2>[
+  Mm2s2(cno:'CS2201',sname: '	Switching Circuits & Logic Design',credits:'4'),
+  Mm2s2(cno:'CS1301',sname: 'Database Management Systems',credits:'4'),
+  Mm2s2(cno:'CS2203',sname: 'Introduction to Software Engineering',credits: '4'),
+  Mm2s2(cno:'MA2204',sname: 'Probability & Stochastic Processes',credits:'4'),
+  Mm2s2(cno:'CS2801',sname: 'Switching Circuits & Logic Design Lab',credits:'2'),
+  Mm2s2(cno:'CS2803',sname: 'Introduction to Software Engineering Lab',credits: '2'),
+  Mm2s2(cno:'HS2201',sname: 'Human values - 2',credits:'P/R'),
+];
+class Mm3s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  Mm3s1({this.cno, this.sname, this.credits});
+}
+var mm3s1=< Mm3s1>[
+  Mm3s1(cno:'MM3101',sname: 'Mechanical Working Of Materials',credits:'4'),
+  Mm3s1(cno:'MM3102',sname: 'Steel Making',credits:'4'),
+  Mm3s1(cno:'MM3103',sname: 'Heat treatment',credits: '4'),
+  Mm3s1(cno:'MM3104',sname: 'Polymer Engineering & Technology',credits:'4'),
+  Mm3s1(cno:'MM3105',sname: 'Composite Materials & Processing',credits:'4'),
+  Mm3s1(cno:'BM3101',sname: 'Personality Development',credits: '1'),
+  Mm3s1(cno:'MM3701',sname: 'Mechanical Working Of Materials lab',credits:'2'),
+  Mm3s1(cno:'MM3702',sname: 'Heat treatment Lab',credits:'2'),
+  Mm3s1(cno:'MM3901',sname: 'Seminar-II',credits: '1'),
+
+];
+class  Mm3s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  Mm3s2({this.cno, this.sname, this.credits});
+}
+var mm3s2=< Mm3s2>[
+  Mm3s2(cno:'CS3201',sname: 'Operating Systems',credits:'3'),
+  Mm3s2(cno:'CS3202',sname: 'Compilers',credits:'4'),
+  Mm3s2(cno:'CS45_',sname: 'Elective - I **',credits: '5'),
+  Mm3s2(cno:'CS3203',sname: 'Applied Graph Theory',credits:'3'),
+  Mm3s2(cno:'CS3801',sname: 'Operating Systems Laboratory',credits:'2'),
+  Mm3s2(cno:'CS3802',sname: 'Compilers Laboratory',credits: '2'),
+
+];
+class Mm4s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  Mm4s1({this.cno, this.sname, this.credits});
+}
+var mm4s1=<Mm4s1>[
+  Mm4s1(cno:'MM4403',sname: 'Elective-I',credits:'3'),
+  Mm4s1(cno:'MM4405',sname: 'Elective-II',credits:'3'),
+  Mm4s1(cno:'XXXXX',sname: 'Open Elective',credits: '3'),
+  Mm4s1(cno:'BM4001',sname: 'Compulsory',credits:'3'),
+  Mm4s1(cno:'MM4700',sname: 'Compulsory',credits:'4'),
+
+];
+class  Mm4s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  Mm4s2({this.cno, this.sname, this.credits});
+}
+var mm4s2=<Mm4s2>[
+  Mm4s2(cno:'BSBE 4401',sname: 'Bioinformatics',credits:'3'),
+  Mm4s2(cno:'BM4401',sname: 'Operations Research',credits:'3'),
+  Mm4s2(cno:'BM4402',sname: 'Production & Operations Research',credits: '3'),
+  Mm4s2(cno:'BM4403',sname: 'Production & Project Management',credits: '3'),
+];
+

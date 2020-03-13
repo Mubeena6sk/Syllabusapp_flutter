@@ -1,0 +1,169 @@
+import 'package:flutter/material.dart';
+import 'package:info_app/branches/cse';
+import 'package:info_app/branches/ece';
+import 'package:info_app/branches/chem';
+import 'package:info_app/branches/mech';
+import 'package:info_app/branches/cvl';
+import 'package:info_app/branches/mme';
+import 'package:shared_preferences/shared_preferences.dart';
+class defaultt extends StatefulWidget{
+  @override
+  State<StatefulWidget> createState()
+  {
+    return Branchname();
+  }
+}
+class Branchname extends State<defaultt> {
+  var branches=['cse','ece','cvl','mech','chem','mme','eee'];
+  var current = 'cse';
+  var years=['1','2','3','4'];
+  var current1 = '1';
+  var sem=['sem1','sem2'];
+  var current2 = 'sem1';
+  String s1,s2,s3;
+  @override
+
+
+
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            DropdownButton<String>(
+              items: branches.map((String dropDownStringItem){
+                return DropdownMenuItem<String>(
+                  value: dropDownStringItem,
+                  child: Text(dropDownStringItem),
+                );
+              }).toList(),
+              onChanged: (String newValueSelected)
+              {
+                savebranch();
+                s1=newValueSelected;
+                setState(() {
+                  this.current=newValueSelected;
+                });
+              },
+              value: current,
+            ),
+            DropdownButton<String>(
+              items: years.map((String dropDownStringItem){
+                return DropdownMenuItem<String>(
+                  value: dropDownStringItem,
+                  child: Text(dropDownStringItem),
+                );
+              }).toList(),
+              onChanged: (String newValueSelected)
+              {
+                saveyear();
+                s2=newValueSelected;
+                setState(() {
+                  this.current1=newValueSelected;
+                });
+              },
+              value: current1,
+            ),
+            DropdownButton<String>(
+              items: sem.map((String dropDownStringItem){
+                return DropdownMenuItem<String>(
+                  value: dropDownStringItem,
+                  child: Text(dropDownStringItem),
+                );
+              }).toList(),
+              onChanged: (String newValueSelected)
+              {
+                savesem();
+                s3=newValueSelected;
+                setState(() {
+                  this.current2=newValueSelected;
+                });
+              },
+              value: current2,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+  void savebranch(){
+    String branch=_controller.text;
+    saveNamePreference(branch).then((bool committed){
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => MainActivity()),
+      );
+    })
+  }
+  void saveyear(){
+    String year=_controller.text;
+    saveNamePreference(year).then((bool committed){
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => MainActivity()),
+      );
+    })
+  }
+  void savesem(){
+    String sem=_controller.text;
+    saveNamePreference(sem).then((bool committed){
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => MainActivity()),
+      );
+    })
+  }
+}
+Future<bool> saveNamePreference(String branch)async{
+  SharedPrefernces prefs=await SharedPrefrences.getInstance();
+  prefs.setString("branch",branch);
+  return prefs.commit();
+}
+Future<bool> saveName1Preference(String year)async{
+  SharedPrefernces prefs1=await SharedPrefrences.getInstance();
+  prefs.setString("year",year);
+  return prefs1.commit();
+}
+Future<bool> saveName2Preference(String sem)async{
+  SharedPrefernces prefs2=await SharedPrefrences.getInstance();
+  prefs.setString("sem",sem);
+  return prefs2.commit();
+}
+Future<String> getNamePreference() async{
+  SharedPreferences prefs =await SharedPreferences.getInstance();
+  String branch=prefs.getString("branch");
+  return branch;
+}
+Future<String> getName1Preference() async{
+  SharedPreferences prefs1 =await SharedPreferences.getInstance();
+  String branch=prefs1.getString("year");
+  return branch;
+}
+Future<String> getName2Preference() async{
+  SharedPreferences prefs2 =await SharedPreferences.getInstance();
+  String branch=prefs2.getString("sem");
+  return branch;
+}
+void initState(){
+  getNamePreference().then(updateBranch);
+  getNamePreference().then(updateYear);
+  getNamePreference().then(updateSem);
+  super.initState();
+}
+void updateBranch(String branch){
+  setState(() {
+    this._branch= branch;
+  });
+}
+void updateYear (String year){
+  setState(() {
+    this._year= year;
+  });
+}
+void updateSem (String sem){
+  setState(() {
+    this._sem = sem;
+  });
+}

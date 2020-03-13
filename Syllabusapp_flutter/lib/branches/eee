@@ -1,0 +1,107 @@
+import 'package:flutter/material.dart';
+import 'package:info_app/subs/subjects';
+/*class Ee1s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  Ee1s1({this.cno, this.sname, this.credits});
+}
+var ee1s1=<Ee1s1>[
+  Ee1s1(cno:'-',sname: 'Free Elective-II',credits:'3'),
+  Ee1s1(cno:'EC4000',sname: 'Comprehensive Viva',credits:'1'),
+  Ee1s1(cno:'	EC4800',sname: 'Project',credits: '16'),
+
+];
+class Ee1s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  Ee1s2({this.cno, this.sname, this.credits});
+}
+var ee1s2=<Ee1s2>[
+  Ee1s2(cno:'-',sname: 'Free Elective-II',credits:'3'),
+  Ee1s2(cno:'EC4000',sname: 'Comprehensive Viva',credits:'1'),
+  Ee1s2(cno:'	EC4800',sname: 'Project',credits: '16'),
+
+];
+class Ee2s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  Ee2s1({this.cno, this.sname, this.credits});
+}
+var ee2s1=<Ee2s1>[
+  Ee2s1(cno:'-',sname: 'Free Elective-II',credits:'3'),
+  Ee2s1(cno:'EC4000',sname: 'Comprehensive Viva',credits:'1'),
+  Ee2s1(cno:'	EC4800',sname: 'Project',credits: '16'),
+
+];
+class Ee2s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  Ee2s2({this.cno, this.sname, this.credits});
+}
+var ee2s2=<Ee2s2>[
+  Ee2s2(cno:'-',sname: 'Free Elective-II',credits:'3'),
+  Ee2s2(cno:'EC4000',sname: 'Comprehensive Viva',credits:'1'),
+  Ee2s2(cno:'	EC4800',sname: 'Project',credits: '16'),
+
+];
+class Ee3s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  Ee3s1({this.cno, this.sname, this.credits});
+}
+var ee3s1=<Ee3s1>[
+  Ee3s1(cno:'-',sname: 'Free Elective-II',credits:'3'),
+  Ee3s1(cno:'EC4000',sname: 'Comprehensive Viva',credits:'1'),
+  Ee3s1(cno:'	EC4800',sname: 'Project',credits: '16'),
+
+];
+class Ee3s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  Ee3s2({this.cno, this.sname, this.credits});
+}
+var ee3s2=<Ee3s2>[
+  Ee3s2(cno:'-',sname: 'Free Elective-II',credits:'3'),
+  Ee3s2(cno:'EC4000',sname: 'Comprehensive Viva',credits:'1'),
+  Ee3s2(cno:'	EC4800',sname: 'Project',credits: '16'),
+
+];
+class Ee4s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  Ee4s1({this.cno, this.sname, this.credits});
+}
+var ee4s1=<Ee4s1>[
+  Ee4s1(cno:'-',sname: 'Free Elective-II',credits:'3'),
+  Ee4s1(cno:'EC4000',sname: 'Comprehensive Viva',credits:'1'),
+  Ee4s1(cno:'	EC4800',sname: 'Project',credits: '16'),
+
+];
+class Ee4s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  Ee4s2({this.cno, this.sname, this.credits});
+}
+var ee4s2=<Ee4s2>[
+  Ee4s2(cno:'-',sname: 'Free Elective-II',credits:'3'),
+  Ee4s2(cno:'EC4000',sname: 'Comprehensive Viva',credits:'1'),
+  Ee4s2(cno:'	EC4800',sname: 'Project',credits: '16'),
+
+];
+*/

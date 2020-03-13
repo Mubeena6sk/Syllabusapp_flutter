@@ -1,0 +1,469 @@
+import 'package:flutter/material.dart';
+import 'package:info_app/subs/subjects';
+class Me1s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  Me1s1({this.cno, this.sname, this.credits});
+}
+var me1s1=<Me1s1>[
+  Me1s1(cno:'MA1101',sname: 'Mathematics-1',credits:'4'),
+  Me1s1(cno:'CY1001',sname: 'Chemistry',credits:'4'),
+  Me1s1(cno:'CS1101',sname: 'Programming in C',credits: '4'),
+  Me1s1(cno:'ME1101',sname: 'Engineering Drawing and Computer Drafting-I',credits: '4'),
+  Me1s1(cno:'ME1001',sname: 'Engineering Mechanics',credits: '4'),
+  Me1s1(cno:'HS1101',sname: 'Communication Skills-I',credits: '1'),
+  Me1s1(cno:'CY1601',sname: 'Engineering Chemistry Lab',credits: '2'),
+  Me1s1(cno:'CS1701',sname: 'Programming in C Lab',credits: '2'),
+];
+class Me1s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  Me1s2({this.cno, this.sname, this.credits});
+}
+var me1s2=<Me1s2>[
+  Me1s2(cno:'MA1202',sname: 'Mathematics -2',credits:'4'),
+  Me1s2(cno:'CY1201/PH1201',sname: 'Chemistry/Physics',credits:'4'),
+  Me1s2(cno:'	E1201/HS1201',sname: 'Mechanics/English)',credits: '3'),
+  Me1s2(cno:'CS1201/EE1201',sname: 'Programming & Data structures/Electrical Technology',credits:'4'),
+  Me1s2(cno:'CE1201/ME1202',sname: 'Engg.Drawing & Graphics/Intro.to Manufact.Proc & WSP)',credits:'3'),
+  Me1s2(cno:'CY1801 /PH1801',sname: 'Chemistry Lab/Physics Lab',credits: '2'),
+  Me1s2(cno:'CS1801 /EE1801',sname: 'Programming and Data Struct Lab/Electrical Technology Lab',credits:'2'),
+  Me1s2(cno:'EA1801',sname: 'Extra Acad Activity2',credits:'P/R'),
+];
+class Me2s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  Me2s1({this.cno, this.sname, this.credits});
+}
+var me2s1=<Me2s1>[
+  Me2s1(cno:'MA2102',sname: 'Mathematics-III',credits:'4'),
+  Me2s1(cno:'ME2101',sname: 'Kinematics of Machinery',credits:'4'),
+  Me2s1(cno:'ME2102',sname: 'Thermodynamics',credits: '4'),
+  Me2s1(cno:'ME2103',sname: 'Mechanics of Solids',credits:'4'),
+  Me2s1(cno:'ME2104',sname: '	Material  Science & Metallurgy',credits:'4'),
+  Me2s1(cno:'HS2101',sname: 'Soft Skills - I',credits: '1'),
+  Me2s1(cno:'ME2701',sname: 'Mechanics of Solids Lab',credits:'2'),
+  Me2s1(cno:'ME2702',sname: '	Material Science & Metallurgy Lab',credits:'2'),
+  Me2s1(cno:'ME2901',sname: 'Seminar-I',credits: '1'),
+
+];
+class Me2s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  Me2s2({this.cno, this.sname, this.credits});
+}
+var me2s2=<Me2s2>[
+  Me2s2(cno:'MA2006',sname: '	Mathematics IV',credits:'4'),
+  Me2s2(cno:'ME2201',sname: 'Dynamics of Machinery',credits:'4'),
+  Me2s2(cno:'ME2202',sname: 'Fluid Mechanics',credits: '4'),
+  Me2s2(cno:'EC2101',sname: 'Basic Electronics',credits:'4'),
+  Me2s2(cno:'EC2701',sname: 'Basic Electronics Lab',credits:'2'),
+  Me2s2(cno:'ME2801',sname: 'Machine drawing practice',credits: '2'),
+  Me2s2(cno:'HS2201',sname: 'Human values - 2',credits: 'P/R'),
+
+];
+class Me3s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  Me3s1({this.cno, this.sname, this.credits});
+}
+var me3s1=<Me3s1>[
+  Me3s1(cno:'MA3102',sname: 'Mathematics-IV',credits:'4'),
+  Me3s1(cno:'ME3101',sname: 'Hydraulic Machines',credits:'4'),
+  Me3s1(cno:'ME3102',sname: 'Metrology & Instrumentation',credits: '4'),
+  Me3s1(cno:'ME3103',sname: 'Design of Machine Elements-I',credits:'4'),
+  Me3s1(cno:'BM3001',sname: 'Managerial Economics & Financial Analysis',credits:'3'),
+  Me3s1(cno:'BM3101',sname: 'Personality Development',credits: '1'),
+  Me3s1(cno:'ME3702',sname: 'Metrology & Instrumentation Lab',credits:'2'),
+  Me3s1(cno:'ME3703',sname: 'Machine Drawing Practice',credits:'2'),
+  Me3s1(cno:'ME3701',sname: 'Fluid Mechanics & hydraulic machines Lab',credits: '2'),
+  Me3s1(cno:'ME3901',sname: 'Seminar-II',credits:'1'),
+
+];
+class  Me3s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  Me3s2({this.cno, this.sname, this.credits});
+}
+var me3s2=<Me3s2>[
+  Me3s2(cno:'ME3201',sname: 'Free Elective-II',credits:'4'),
+  Me3s2(cno:'ME3202',sname: 'Comprehensive Viva',credits:'4'),
+  Me3s2(cno:'ME3203',sname: 'Project',credits: '4'),
+  Me3s2(cno:'ME3204',sname: 'Free Elective-II',credits:'4'),
+  Me3s2(cno:'IM___',sname: 'Comprehensive Viva',credits:'3/4'),
+  Me3s2(cno:'ME3801',sname: 'Project',credits: '2'),
+  Me3s2(cno:'ME3802',sname: 'Free Elective-II',credits:'2'),
+
+];
+class  Me4s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  Me4s1({this.cno, this.sname, this.credits});
+}
+var me4s1=<Me4s1>[
+  Me4s1(cno:'ME4101',sname: '	Applied Thermodynamics-II',credits:'4'),
+  Me4s1(cno:'ME4102',sname: '	CAD/CAM',credits:'4'),
+  Me4s1(cno:'ME4103',sname: 'Refrigeration and Air Conditioning',credits: '4'),
+  Me4s1(cno:'ME4700',sname: 'Project -I',credits:'4'),
+  Me4s1(cno:'ME44__',sname: 'Elective-I',credits:'3'),
+  Me4s1(cno:'ME4701',sname: 'Applied Thermodynamics Lab',credits: '2'),
+  Me4s1(cno:'ME4702',sname: 'CAD/CAM Lab',credits:'2'),
+  Me4s1(cno:'ME4703',sname: '	Automation and Robotics Lab',credits:'2'),
+
+];
+class  Me4s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  Me4s2({this.cno, this.sname, this.credits});
+}
+var me4s2=<Me4s2>[
+  Me4s2(cno:'ME450_',sname: 'Elective - II',credits:'3/4'),
+  Me4s2(cno:'ME450_',sname: '	Elective - III',credits:'3/4'),
+  Me4s2(cno:'ME450_',sname: 'Elective - IV',credits: '3/4'),
+  Me4s2(cno:'CH4502',sname: 'Project',credits: '6'),
+  Me4s2(cno:'-',sname: 'Free Elective - II',credits: '3'),
+];
+
+class Mech1sem1 extends StatefulWidget {
+  @override
+  Mech1sem1State createState() => Mech1sem1State();
+}
+class Mech1sem1State extends State<Mech1sem1> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: me1s1.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            Text(name.sname),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Mech:year1:sem1"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Mech1sem2 extends StatefulWidget {
+  @override
+  Mech1sem2State createState() => Mech1sem2State();
+}
+class Mech1sem2State extends State<Mech1sem2> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: me1s2.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            Text(name.sname),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Mech:year1:sem2"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Mech2sem1 extends StatefulWidget {
+  @override
+  Mech2sem1State createState() => Mech2sem1State();
+}
+class Mech2sem1State extends State<Mech2sem1> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: me2s1.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            Text(name.sname),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Mech:year2:sem1"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Mech2sem2 extends StatefulWidget {
+  @override
+  Mech2sem2State createState() => Mech2sem2State();
+}
+class Mech2sem2State extends State<Mech2sem2> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: me2s2.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            Text(name.sname),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Mech:year2:sem2"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Mech3sem1 extends StatefulWidget {
+  @override
+  Mech3sem1State createState() => Mech3sem1State();
+}
+class Mech3sem1State extends State<Mech3sem1> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: me3s1.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            Text(name.sname),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Mech:year3:sem1"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Mech3sem2 extends StatefulWidget {
+  @override
+  Mech3sem2State createState() => Mech3sem2State();
+}
+class Mech3sem2State extends State<Mech3sem2> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: me3s2.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            Text(name.sname),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("ece:year3:sem2"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Mech4sem1 extends StatefulWidget {
+  @override
+  Mech4sem1State createState() => Mech4sem1State();
+}
+class Mech4sem1State extends State<Mech4sem1> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: me4s1.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            Text(name.sname),
+          ),
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Mech:year4:sem1"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Mech4sem2 extends StatefulWidget {
+  @override
+  Mech4sem2State createState() => Mech4sem2State();
+}
+class Mech4sem2State extends State<Mech4sem2> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: me4s2.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            Text(name.sname),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("mech:year4:sem2"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+

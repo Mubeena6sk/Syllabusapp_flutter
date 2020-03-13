@@ -1,0 +1,862 @@
+import 'package:flutter/material.dart';
+import 'package:info_app/subs/subjects';
+class Cse1sem1 extends StatefulWidget {                //page that opens cseyear1sem1 subjecta
+  @override
+  Cse1sem1State createState() => Cse1sem1State();
+}
+class Cse1sem1State extends State<Cse1sem1> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child:SizedBox(
+        child: DataTable(
+          columns: <DataColumn>[
+            DataColumn(label: Text('Course.no'),
+              numeric: false,
+            ),
+            DataColumn(label: Text('Subject name'),
+              numeric: false,
+            ),
+          ],
+          rows: c1s1.map((name)=>DataRow(cells: [
+            DataCell(
+              Text(name.cno),
+            ),
+            DataCell(
+              GestureDetector(
+                child: Text(name.sname, style: TextStyle(decoration: TextDecoration.underline, color: Colors.brown)),
+                onTap: () {
+                  if(name.sname=='Programming in C') {            //navigates to the page that shows syllabus of c programming
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => C()),
+                    );
+                  }
+                  else if(name.sname=='Chemistry')
+                  {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Chem()),
+                    );
+                  }
+                  else if(name.sname=='Mathematics-1')
+                  {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => M1()),
+                    );
+                  }
+                  else if(name.sname=='Engineering Mechanics')
+                  {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Em()),
+                    );
+                  }
+                  else if(name.sname=='Network Analysis')
+                  {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Na()),
+                    );
+                  }
+                  else if(name.sname=='Communication Skills-I')
+                  {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Cs1()),
+                    );
+                  }
+                  else if(name.sname=='Programming in C Lab')
+                  {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Clab()),
+                    );
+                  }
+                  else
+                  {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Chemlab()),
+                    );
+                  }
+                },
+              ),
+            ),
+          ],),).toList(),),),
+    );
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("cse:year1:sem1"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Cse1sem2 extends StatefulWidget {
+  @override
+  Cse1sem2State createState() => Cse1sem2State();
+}
+class Cse1sem2State extends State<Cse1sem2> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+        ],
+        rows: c1s2.map((name) =>
+            DataRow(cells: [
+              DataCell(
+                Text(name.cno),
+              ),
+              DataCell(
+                GestureDetector(
+                  child: Text(name.sname, style: TextStyle(
+                      decoration: TextDecoration.underline,
+                      color: Colors.brown)),
+                  onTap: () {
+                    if (name.sname == 'Data Structures') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Ds()),
+                      );
+                    }
+                    else if (name.sname == 'Physics') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Phy()),
+                      );
+                    }
+                    else if (name.sname == 'Mathematics-2') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => M2()),
+                      );
+                    }
+                    else if (name.sname == 'English') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Eng()),
+                      );
+                    }
+                    else if (name.sname == 'Basic Electronics') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Be()),
+                      );
+                    }
+                    else if (name.sname == 'Communication Skills') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Cs()),
+                      );
+                    }
+                    else if (name.sname == 'English Lab') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Englab()),
+                      );
+                    }
+                    else if (name.sname == 'Data Structures Lab') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Dslab()),
+                      );
+                    }
+                    else {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Phylab()),
+                      );
+                    }
+                  },
+                ),
+              ),
+            ],),).toList(),
+      ),);
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("cse:year1:sem2"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Cse2sem1 extends StatefulWidget {
+  @override
+  Cse2sem1State createState() => Cse2sem1State();
+}
+class Cse2sem1State extends State<Cse2sem1> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child:SizedBox(
+        child: DataTable(
+          columns: <DataColumn>[
+            DataColumn(label: Text('Course.no'),
+              numeric: false,
+            ),
+            DataColumn(label: Text('Subject name'),
+              numeric: false,
+            ),
+          ],
+          rows: c2s1.map((name) =>
+              DataRow(cells: [
+                DataCell(
+                  Text(name.cno),
+                ),
+                DataCell(
+                  GestureDetector(
+                    child: Text(name.sname, style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        color: Colors.brown)),
+                    onTap: () {
+                      if (name.sname == 'Discrete Structures') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Mds()),
+                        );
+                      }
+                      else if (name.sname == 'Digital Logic Design') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Dld()),
+                        );
+                      }
+                      else
+                      if (name.sname == 'Design & Analysis of Algorithms') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Daa()),
+                        );
+                      }
+                      else if (name.sname == 'Scripting Languages') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Sl()),
+                        );
+                      }
+                      else if (name.sname == 'Database Management System') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Dbms()),
+                        );
+                      }
+                      else if (name.sname == 'Soft Skills - I') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Ss1()),
+                        );
+                      }
+                      else if (name.sname == 'Digital Logic Design Lab') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Dldlab()),
+                        );
+                      }
+                      else if (name.sname == 'Database Management System Lab') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Dbmslab()),
+                        );
+                      }
+                      else {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Seminar1()),
+                        );
+                      }
+                    },
+                  ),
+                ),
+              ],),).toList(),),),);
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("cse:year2:sem1"),
+        backgroundColor: Colors.brown,
+      ),
+      body:Container(
+        child:Column(
+          children: <Widget>[
+            Expanded(
+              child: dataBody(),
+            )
+          ],
+        ),
+      ),
+      );
+  }
+}
+
+class Cse2sem2 extends StatefulWidget {
+  @override
+  Cse2sem2State createState() => Cse2sem2State();
+}
+class Cse2sem2State extends State<Cse2sem2> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+        child: DataTable(
+          columns: <DataColumn>[
+            DataColumn(label: Text('Course.no'),
+              numeric: false,
+            ),
+            DataColumn(label: Text('Subject name'),
+              numeric: false,
+            ),
+          ],
+          rows: c2s2.map((name) =>
+              DataRow(cells: [
+                DataCell(
+                  Text(name.cno),
+                ),
+                DataCell(
+                  GestureDetector(
+                    child: Text(name.sname, style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        color: Colors.brown)),
+                    onTap: () {
+                      if (name.sname == 'Database Management Systems (DBMS)') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Dbms()),
+                        );
+                      }
+                      else
+                      if (name.sname == 'Switching Circuits & Logic Design') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Scld()),
+                        );
+                      }
+
+                      else
+                      if (name.sname == 'Introduction to Software Engineering') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Se()),
+                        );
+                      }
+                      else
+                      if (name.sname == 'Probability and Stochastic Processes') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Psplab()),
+                        );
+                      }
+                      else if (name.sname ==
+                          'Switching Circuits & Logic Design Laboratory') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Scldlab()),
+                        );
+                      }
+                      else if (name.sname ==
+                          'Introduction to Software Engineering Laboratory') {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Selab()),
+                        );
+                      }
+                      else {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Hv2()),
+                        );
+                      }
+                    },
+                  ),
+                ),
+              ],),).toList(),),);
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("cse:year2:sem2"),
+        backgroundColor: Colors.brown,
+      ),
+      body:Container(
+        padding:new EdgeInsets.all(10.0),
+        child:Column(
+          children: <Widget>[
+            Expanded(
+              child: dataBody(),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Cse3sem1 extends StatefulWidget {
+  @override
+  Cse3sem1State createState() => Cse3sem1State();
+}
+class Cse3sem1State extends State<Cse3sem1> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+         // DataColumn(label: Text('Credits'),
+        //    numeric: true,
+       //   ),
+
+        ],
+        rows: c3s1.map((name)=>DataRow(
+          cells: [
+            DataCell(
+              Text(name.cno),
+            ),
+            DataCell(
+              GestureDetector(
+                child: Text(name.sname, style: TextStyle(decoration: TextDecoration.underline, color: Colors.brown)),
+                onTap: () {
+                  if(name.sname=='Compiler Design')
+                  {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Cd()),
+                    );
+                  }
+                  else if(name.sname=='Artificial Intelligence')
+                  {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Ai()),
+                    );
+                  }
+                  else if(name.sname=='Operating Systems')
+                  {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Os()),
+                    );
+                  }
+                  else if(name.sname=='Web Technologies')
+                  {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Wt()),
+                    );
+                  }
+                  else if(name.sname=='Introduction to Software Engineering Laboratory')
+                  {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Selab()),
+                    );
+                  }
+                  else if(name.sname=='Environmental Science')
+                  {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Es()),
+                    );
+                  }
+                  else if(name.sname=='Personality Development')
+                  {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Pd()),
+                    );
+                  }
+                  else if(name.sname=='Operating Systems Lab')
+                  {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Oslab()),
+                    );
+                  }
+                  else if(name.sname=='Web Technologies Lab')
+                  {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Wtlab()),
+                    );
+                  }
+                  else
+                  {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Seminar2()),
+                    );
+                  }
+                },
+              ),
+            ),
+          ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("cse:year3:sem1"),
+        backgroundColor: Colors.brown,
+      ),
+      body:Container(
+        child:Column(
+        children: <Widget>[
+          Expanded(
+          child: dataBody(),
+          )
+    ],
+        ),
+      ),
+    );
+  }
+}
+class Cse3sem2 extends StatefulWidget {
+  @override
+  Cse3sem2State createState() => Cse3sem2State();
+}
+class Cse3sem2State extends State<Cse3sem2> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+          //    DataColumn(label: Text('Credits'),
+          //    numeric: true,
+          //     ),
+        ],
+        rows: c3s2.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            Text(name.sname),
+          ),
+          //     DataCell(
+          //     Text(name.credits),
+          //     ),
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("cse:year3:sem2"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Cse4sem1 extends StatefulWidget {
+  @override
+  Cse4sem1State createState() => Cse4sem1State();
+}
+class Cse4sem1State extends State<Cse4sem1> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+          //      DataColumn(label: Text('Credits'),
+          //        numeric: true,
+          //      ),
+        ],
+        rows: c4s1.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            GestureDetector(
+              child: Text(name.sname, style: TextStyle(decoration: TextDecoration.underline, color: Colors.brown)),
+              onTap: () {
+                if(name.sname=='Internship')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Intern()),
+                  );
+                }
+                else if(name.sname=='Artificial Intelligence')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Ai()),
+                  );
+                }
+                else if(name.sname=='Data Mining')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Dm()),
+                  );
+                }
+                else if(name.sname=='Computer Networks')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Cn()),
+                  );
+                }
+                else if(name.sname=='Environmental Science')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Es()),
+                  );
+                }
+                else if(name.sname=='Data Mining Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Dmlab()),
+                  );
+                }
+                else
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => project()),
+                  );
+                }
+
+              },
+            ),
+          ),
+          //     DataCell(
+          //        Text(name.credits),
+          //      ),
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("cse:year4:sem1"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Cse4sem2 extends StatefulWidget {
+  @override
+  Cse4sem2State createState() => Cse4sem2State();
+}
+class Cse4sem2State extends State<Cse4sem2> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+          //    DataColumn(label: Text('Credits'),
+          //      numeric: true,
+          //    ),
+        ],
+        rows: c4s2.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            Text(name.sname),
+          ),
+          //    DataCell(
+          //      Text(name.credits),
+          //  ),
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("cse:year4:sem2"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+
+
+class C1s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  C1s1({this.cno, this.sname, this.credits});
+}
+var c1s1=<C1s1>[
+  C1s1(cno:'CS1101',sname: 'Programming in C',credits:'4'),
+  C1s1(cno:'CY1001',sname: 'Chemistry',credits:'4'),
+  C1s1(cno:'MA1101',sname: 'Mathematics-1',credits: '4'),
+  C1s1(cno:'CE1101',sname: 'Engineering Mechanics',credits: '4'),
+  C1s1(cno:'EC1101',sname: 'Network Analysis',credits: '4'),
+  C1s1(cno:'HS1101',sname: 'Communication Skills-1',credits: '4'),
+  C1s1(cno:'CS1701',sname: 'Programming in C Lab',credits: '4'),
+  C1s1(cno:'CY1601',sname: 'Chemistry Lab',credits: '4'),
+];
+class C1s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  C1s2({this.cno, this.sname, this.credits});
+}
+var c1s2=<C1s2>[
+  C1s2(cno:'CS1201',sname: 'Data Structures',credits:'4'),
+  C1s2(cno:'PH1001',sname: 'Physics',credits:'4'),
+  C1s2(cno:'MA1201',sname: 'Mathematics-2',credits: '4'),
+  C1s2(cno:'HS1001',sname: 'English',credits: '3'),
+  C1s2(cno:'EC1208',sname: 'Basic Electronics',credits: '4'),
+  C1s2(cno:'HS1201',sname: 'Communication Skills',credits: '1'),
+  C1s2(cno:'HS1601',sname: 'English Lab',credits: '2'),
+  C1s2(cno:'CS1802',sname: 'Data Structures Lab',credits: '2'),
+  C1s2(cno:'PH1601',sname: 'Physics Lab',credits: '2'),
+];
+class C2s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  C2s1({this.cno, this.sname, this.credits});
+}
+var c2s1=<C2s1>[
+  C2s1(cno:'MA2101',sname: 'Discrete Structures',credits:'4'),
+  C2s1(cno:'CS2101',sname: 'Digital Logic Design',credits:'4'),
+  C2s1(cno:'CS2102',sname: 'Design and Analysis of Algorithms',credits: '4'),
+  C2s1(cno:'CS2103',sname: 'Scripting Languages',credits: '4'),
+  C2s1(cno:'CS2104',sname: 'Database Management System',credits: '4'),
+  C2s1(cno:'HS2101',sname: 'Soft Skills - I',credits: '1'),
+  C2s1(cno:'CS2701',sname: 'Digital Logic Design Lab',credits: '2'),
+  C2s1(cno:'CS2704',sname: 'Database Management System Lab',credits: '2'),
+  C2s1(cno:'CS2901',sname: 'Seminar-I',credits: '1'),
+];
+class C2s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  C2s2({this.cno, this.sname, this.credits});
+}
+var c2s2=<C2s2>[
+  C2s2(cno:'CS2201',sname: 'Switching Circuits & Logic Design',credits:'4'),
+  C2s2(cno:'CS1301',sname: 'Database Management Systems',credits:'4'),
+  C2s2(cno:'CS2203',sname: 'Introduction to Software Engineering',credits: '4'),
+  C2s2(cno:'MA2204',sname: 'Probability & Stochastic Process',credits: '4'),
+  C2s2(cno:'CS2801',sname: 'Switching Circuits & Logic Design Lab',credits: '2'),
+  C2s2(cno:'CS2803',sname: 'Introduction to Software Engineering Lab',credits: '2'),
+  C2s2(cno:'HS2201',sname: 'Human values - 2',credits: 'P/R'),
+];
+class C3s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  C3s1({this.cno, this.sname, this.credits});
+}
+var c3s1=<C3s1>[
+  C3s1(cno:'CS3101',sname: 'Artificial Intelligence',credits:'4'),
+  C3s1(cno:'CS3102',sname: 'Compiler Design',credits:'4'),
+  C3s1(cno:'CS3103',sname: 'Operating Systems',credits: '4'),
+  C3s1(cno:'CS3104',sname: 'Web Technologies',credits: '4'),
+  C3s1(cno:'BSBE2001/3001',sname: 'Environmental Science',credits: '3'),
+  C3s1(cno:'BM3101',sname: 'Personality Development',credits: '1'),
+  C3s1(cno:'CS3701',sname: 'Operating Systems Lab',credits: '2'),
+  C3s1(cno:'CS3702',sname: 'Web Technologies Lab',credits: '2'),
+  C3s1(cno:'CS3901',sname: 'Seminar-II',credits: '1'),
+];
+class C3s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  C3s2({this.cno, this.sname, this.credits});
+}
+var c3s2=<C3s2>[
+  C3s2(cno:'CS3201',sname: 'Operating Systems',credits:'3'),
+  C3s2(cno:'CS3202',sname: 'Compilers',credits:'4'),
+  C3s2(cno:'CS45__',sname: 'Elective - I **',credits: '5'),
+  C3s2(cno:'CS3203',sname: 'Applied Graph Theory',credits: '3'),
+  C3s2(cno:'CS3801',sname: 'Operating Systems Laboratory',credits: '2'),
+  C3s2(cno:'CS3802',sname: 'Compilers Laboratory',credits: '2'),
+];
+class C4s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  C4s1({this.cno, this.sname, this.credits});
+}
+var c4s1=<C4s1>[
+  C4s1(cno:'CS3900',sname: 'Internship',credits:'6'),
+  C4s1(cno:'CS4101',sname: 'Artificial Intelligence',credits:'4'),
+  C4s1(cno:'CS4102',sname: 'Data Mining',credits: '4'),
+  C4s1(cno:'CS4103',sname: 'Computer Networks',credits: '4'),
+  C4s1(cno:'BSBE2001/3001',sname: 'Environmental Science',credits: '3'),
+  C4s1(cno:'CS4701',sname: 'Data Mining Lab',credits: '2'),
+  C4s1(cno:'CS4700',sname: 'Project',credits: '4'),
+];
+class C4s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  C4s2({this.cno, this.sname, this.credits});
+}
+var c4s2=<C4s2>[
+  C4s2(cno:'CS45__',sname: 'Elective - III',credits:'3/4'),
+  C4s2(cno:'CS45__',sname: 'Elective - IV',credits:'3/4'),
+  C4s2(cno:'BM____',sname: 'Free Elective - II',credits: '3'),
+  C4s2(cno:'CS4800',sname: 'Project',credits: '6'),
+  C4s2(cno:'CS4801',sname: 'Comprehensive Viva Voice',credits: '-'),
+];

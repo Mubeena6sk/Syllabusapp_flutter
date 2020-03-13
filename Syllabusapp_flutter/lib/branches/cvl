@@ -1,0 +1,913 @@
+import 'package:flutter/material.dart';
+import 'package:info_app/subs/subjects';
+class Cv1s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  Cv1s1({this.cno, this.sname, this.credits});
+}
+var cv1s1=<Cv1s1>[
+  Cv1s1(cno:'MA1101',sname: 'Mathematics -I',credits:'4'),
+  Cv1s1(cno:'CE1101',sname: 'Engineering Mechanics-I',credits:'4'),
+  Cv1s1(cno:'HS1001',sname: 'English',credits: '3'),
+  Cv1s1(cno:'PH1001',sname: 'Physics',credits:'4'),
+  Cv1s1(cno:'CS1101',sname: 'Programming in C',credits:'4'),
+  Cv1s1(cno:'HS1101',sname: 'Communication Skills-I',credits: '1'),
+  Cv1s1(cno:'HS1601',sname: 'English Lab',credits:'2'),
+  Cv1s1(cno:'PH1601',sname: 'Physics Lab',credits:'2'),
+  Cv1s1(cno:'CS1701',sname: 'Programming in C-Lab',credits: '2'),
+];
+class Cv1s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  Cv1s2({this.cno, this.sname, this.credits});
+}
+var cv1s2=<Cv1s2>[
+  Cv1s2(cno:'MA1201',sname: 'Mathematics-II',credits:'4'),
+  Cv1s2(cno:'CE1201',sname: 'Engineering Mechanics-II',credits:'4'),
+  Cv1s2(cno:'CE1001',sname: 'Engineering Drawing',credits: '4'),
+  Cv1s2(cno:'CY1001',sname: 'Chemistry',credits:'4'),
+  Cv1s2(cno:'CS1201',sname: 'Scripting Languages',credits:'3'),
+  Cv1s2(cno:'HS1201',sname: 'Communication Skills-II',credits: '1'),
+  Cv1s2(cno:'ME1601',sname: 'Engineering Workshop',credits:'2'),
+  Cv1s2(cno:'CY1601',sname: 'Chemistry Lab',credits:'2'),
+
+];
+class Cv2s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  Cv2s1({this.cno, this.sname, this.credits});
+}
+var cv2s1=<Cv2s1>[
+  Cv2s1(cno:'CE2101',sname: 'Surveying',credits:'4'),
+  Cv2s1(cno:'CE2102',sname: 'Building Materials and Concrete Technology',credits:'4'),
+  Cv2s1(cno:'CE2103',sname: 'Mechanics of Materials',credits: '4'),
+  Cv2s1(cno:'CE2104',sname: 'Mechanics of Fluids',credits:'4'),
+  Cv2s1(cno:'MA2103',sname: 'Mathematics - III',credits:'4'),
+  Cv2s1(cno:'HS2101',sname: 'Communication Skills-I',credits: '1'),
+  Cv2s1(cno:'CE2701',sname: 'Surveying Lab',credits:'2'),
+  Cv2s1(cno:'CE2702',sname: 'Materials Testing Lab',credits:'2'),
+  Cv2s1(cno:'CE2703',sname: 'Mechanics of Fluids Lab',credits: '2'),
+  Cv2s1(cno:'CE2901',sname: 'Seminar-I',credits:'1'),
+];
+class Cv2s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  Cv2s2({this.cno, this.sname, this.credits});
+}
+var cv2s2=<Cv2s2>[
+  Cv2s2(cno:'CE2201',sname: 'Hydraulic Engineering',credits:'4'),
+  Cv2s2(cno:'CE2202',sname: 'Geo Science',credits:'4'),
+  Cv2s2(cno:'CE2203',sname: 'Structural Analysis - I',credits: '4'),
+  Cv2s2(cno:'CE2204',sname: 'Design of Concrete Structures',credits:'4'),
+  Cv2s2(cno:'BSBE2001/3001',sname: 'Environmental Science',credits:'3'),
+  Cv2s2(cno:'BM2201',sname: 'Personality Development-I',credits: '1'),
+  Cv2s2(cno:'CE2801',sname: 'Hydraulic Engineering Lab',credits:'2'),
+  Cv2s2(cno:'CE2802',sname: 'Geo Science Lab',credits:'2'),
+  Cv2s2(cno:'CE2803',sname: 'Concrete Lab',credits: '2'),
+  Cv2s2(cno:'CE2902',sname: 'Seminar-II',credits:'1'),
+
+];
+class Cv3s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  Cv3s1({this.cno, this.sname, this.credits});
+}
+var cv3s1=<Cv3s1>[
+  Cv3s1(cno:'CE3101',sname: 'Hydraulic Engineering',credits:'4'),
+  Cv3s1(cno:'CE3102',sname: 'Transportation Engineering-II',credits:'4'),
+  Cv3s1(cno:'CE3103',sname: 'Structural Analysis-II',credits: '4'),
+  Cv3s1(cno:'CE3104',sname: 'Soil Mechanics',credits:'4'),
+  Cv3s1(cno:'CE3105',sname: 'Design of Steel Structures',credits:'4'),
+  Cv3s1(cno:'BM3101',sname: 'Personality Development',credits: '1'),
+  Cv3s1(cno:'CE3701',sname: 'Hydraulic Engineering Lab',credits:'2'),
+  Cv3s1(cno:'CE3702',sname: 'Soil Mechanics Lab',credits:'2'),
+  Cv3s1(cno:'CE3901',sname: 'Seminar-II',credits: '1'),
+
+];
+class  Cv3s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  Cv3s2({this.cno, this.sname, this.credits});
+}
+var cv3s2=<Cv3s2>[
+  Cv3s2(cno:'CE3201',sname: 'Construction Engineering,Estimation & Specifications',credits:'4'),
+  Cv3s2(cno:'CE3202',sname: 'Hydrology & Irrigation Engineering',credits:'4'),
+  Cv3s2(cno:'CE3203',sname: 'Environmental Engineering',credits: '4'),
+  Cv3s2(cno:'CE3204',sname: 'Foundation Engineering',credits:'4'),
+  Cv3s2(cno:'CS3001',sname: 'Object Oriented Programming through Java',credits:'4'),
+  Cv3s2(cno:'HS3201',sname: 'Soft Skill',credits: '1'),
+  Cv3s2(cno:'CE3801',sname: 'Environmental Engineering Lab',credits:'2'),
+  Cv3s2(cno:'CS3601',sname: 'Object Oriented Programming through Java Lab',credits:'2'),
+  Cv3s2(cno:'CE3902',sname: 'Seminar-III',credits: '1'),
+  Cv3s2(cno:'CE3000',sname: 'Comprehensive Viva-I',credits: '1'),
+
+];
+class  Cv4s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  Cv4s1({this.cno, this.sname, this.credits});
+}
+var cv4s1=<Cv4s1>[
+  Cv4s1(cno:'BM3001/4001',sname: 'Managerial Economics & Financial Analysis',credits:'3'),
+  Cv4s1(cno:'CE4101',sname: 'Structural Design',credits:'4'),
+  Cv4s1(cno:'CE4102',sname: 'Advanced Water Resource Engineering',credits: '4'),
+  Cv4s1(cno:'CE4532',sname: 'Elective-I Remote Sensing & GIS',credits:'3'),
+  Cv4s1(cno:'CE4700',sname: 'Project',credits: '4'),
+
+
+];
+class  Cv4s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  Cv4s2({this.cno, this.sname, this.credits});
+}
+var cv4s2=<Cv4s2>[
+  Cv4s2(cno:'CE4501',sname: 'Ground Improvement Techniques',credits:'3'),
+  Cv4s2(cno:'CE4800',sname: 'Project',credits:'12'),
+  Cv4s2(cno:'CE4000',sname: 'Comprehensive Viva-II',credits: '1'),
+];
+
+
+class Cvl1sem1 extends StatefulWidget {
+  @override
+  Cvl1sem1State createState() => Cvl1sem1State();
+}
+class Cvl1sem1State extends State<Cvl1sem1> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: cv1s1.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            GestureDetector(
+              child: Text(name.sname, style: TextStyle(decoration: TextDecoration.underline, color: Colors.brown)),
+              onTap: () {
+                if(name.sname=='Programming in C') {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => C()),
+                  );
+                }
+                else if(name.sname=='Physics')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Phy()),
+                  );
+                }
+                else if(name.sname=='Mathematics-1')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => M1()),
+                  );
+                }
+                else if(name.sname=='English')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Eng()),
+                  );
+                }
+                else if(name.sname=='Engineering Mechanics-I')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Em1()),
+                  );
+                }
+                else if(name.sname=='Communication Skills-I')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Cs1()),
+                  );
+                }
+                else if(name.sname=='Programming in C Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Clab()),
+                  );
+                }
+                else
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Phylab()),
+                  );
+                }
+              },
+            ),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("cvl:year1:sem1"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Cvl1sem2 extends StatefulWidget {
+  @override
+  Cvl1sem2State createState() => Cvl1sem2State();
+}
+class Cvl1sem2State extends State<Cvl1sem2> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: cv1s2.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            GestureDetector(
+              child: Text(name.sname, style: TextStyle(decoration: TextDecoration.underline, color: Colors.brown)),
+              onTap: () {
+                if(name.sname=='Engineering Mechanics-II')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Em2()),
+                  );
+                }
+                else if(name.sname=='Mathematics-2')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => M2()),
+                  );
+                }
+                else if(name.sname=='Engineering Drawing')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Ed()),
+                  );
+                }
+                else if(name.sname=='Chemistry')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Chem()),
+                  );
+                }
+                else if(name.sname=='Scripting Languages')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Sl()),
+                  );
+                }
+                else if(name.sname=='Communication Skills-II')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Cs2()),
+                  );
+                }
+                else if(name.sname=='Engineering Workshop')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Ew()),
+                  );
+                }
+                else
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Chemlab()),
+                  );
+                }
+              },
+            ),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("cvl:year1:sem2"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Cvl2sem1 extends StatefulWidget {
+  @override
+  Cvl2sem1State createState() => Cvl2sem1State();
+}
+class Cvl2sem1State extends State<Cvl2sem1> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: cv2s1.map((name) =>
+            DataRow(cells: [
+              DataCell(
+                Text(name.cno),
+              ),
+              DataCell(
+                GestureDetector(
+                  child: Text(name.sname, style: TextStyle(
+                      decoration: TextDecoration.underline,
+                      color: Colors.brown)),
+                  onTap: () {
+                    if (name.sname ==
+                        'Building Materials and Concrete Technology') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Bmct()),
+                      );
+                    }
+                    else if (name.sname == 'Surveying') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Sur()),
+                      );
+                    }
+                    else if (name.sname == 'Mechanics of Materials') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Mom()),
+                      );
+                    }
+                    else if (name.sname == 'Mechanics of Fluids') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Mf()),
+                      );
+                    }
+                    else if (name.sname == 'Mathematics - III') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => M3()),
+                      );
+                    }
+                    else if (name.sname == 'Communication Skills-I') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Cs1()),
+                      );
+                    }
+                    else if (name.sname == 'Surveying Lab') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Surlab()),
+                      );
+                    }
+                    else if (name.sname == 'Materials Testing Lab') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Mtlab()),
+                      );
+                    }
+                    else if (name.sname == 'Mechanics of Fluids Lab') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Mflab()),
+                      );
+                    }
+                    else {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Seminar1()),
+                      );
+                    }
+                  },
+                ),
+              ),
+
+            ],),).toList(),
+      ),);
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("cvl:year2:sem1"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Cvl2sem2 extends StatefulWidget {
+  @override
+  Cvl2sem2State createState() => Cvl2sem2State();
+}
+class Cvl2sem2State extends State<Cvl2sem2> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: cv2s2.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            GestureDetector(
+              child: Text(name.sname, style: TextStyle(decoration: TextDecoration.underline, color: Colors.brown)),
+              onTap: () {
+                if(name.sname=='Design of Concrete Structures')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Dsc()),
+                  );
+                }
+                else if(name.sname=='Environmental Science')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Es()),
+                  );
+                }
+                else if(name.sname=='Hydraulic Engineering')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => He()),
+                  );
+                }
+                else if(name.sname=='Geo Science')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Gs()),
+                  );
+                }
+                else if(name.sname=='Structural Analysis - I')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Sa1()),
+                  );
+                }
+                else if(name.sname=='Personality Development-I')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Pd1()),
+                  );
+                }
+                else if(name.sname=='Hydraulic Engineering Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Helab()),
+                  );
+                }
+                else if(name.sname=='Geo Science Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Gslab()),
+                  );
+                }
+                else if(name.sname=='Concrete Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Conlab()),
+                  );
+                }
+                else
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Seminar2()),
+                  );
+                }
+
+              },
+            ),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("cvl:year2:sem2"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Cvl3sem1 extends StatefulWidget {
+  @override
+  Cvl3sem1State createState() => Cvl3sem1State();
+}
+class Cvl3sem1State extends State<Cvl3sem1> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: cv3s1.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            GestureDetector(
+              child: Text(name.sname, style: TextStyle(decoration: TextDecoration.underline, color: Colors.brown)),
+              onTap: () {
+                if(name.sname=='Hydraulic Engineering')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => He()),
+                  );
+                }
+
+                else if(name.sname=='Transportation Engineering-II')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Te()),
+                  );
+                }
+                else if(name.sname=='Structural Analysis-II')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Sa2()),
+                  );
+                }
+                else if(name.sname=='Soil Mechanics')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Sm()),
+                  );
+                }
+                else if(name.sname=='Design of Steel Structures')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Dss()),
+                  );
+                }
+                else if(name.sname=='Personality Development')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Pd()),
+                  );
+                }
+                else if(name.sname=='Hydraulics Engineering Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Helab()),
+                  );
+                }
+                else if(name.sname=='Soil Mechanics Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Smlab()),
+                  );
+                }
+                else
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Seminar2()),
+                  );
+                }
+              },
+            ),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("cvl:year3:sem1"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Cvl3sem2 extends StatefulWidget {
+  @override
+  Cvl3sem2State createState() => Cvl3sem2State();
+}
+class Cvl3sem2State extends State<Cvl3sem2> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: cv3s2.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            GestureDetector(
+              child: Text(name.sname, style: TextStyle(decoration: TextDecoration.underline, color: Colors.brown)),
+              onTap: () {
+                if(name.sname=='Construction Engineering, Estimation and Specifications')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Cees()),
+                  );
+                }
+                else if(name.sname=='Hydrology and Irrigation Engineering')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Hie()),
+                  );
+                }
+                else if(name.sname=='Foundation Engineering')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Flab()),
+                  );
+                }
+                else if(name.sname=='Object Oriented Programming through Java')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Oop()),
+                  );
+                }
+                else if(name.sname=='Soft Skill')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Ss()),
+                  );
+                }
+                else if(name.sname=='Environmental Engineering Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Eelab()),
+                  );
+                }
+                else if(name.sname=='Object Oriented Programming through Java Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Ooplab()),
+                  );
+                }
+                else if(name.sname=='Seminar-III')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Seminar3()),
+                  );
+                }
+                else
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Cv1()),
+                  );
+                }
+
+              },
+            ),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Cvl:year3:sem2"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Cvl4sem1 extends StatefulWidget {
+  @override
+  Cvl4sem1State createState() => Cvl4sem1State();
+}
+class Cvl4sem1State extends State<Cvl4sem1> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: cv4s1.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            GestureDetector(
+              child: Text(name.sname, style: TextStyle(decoration: TextDecoration.underline, color: Colors.brown)),
+              onTap: () {
+                if(name.sname=='Managerial Economics and Financial Analysis')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Mefa()),
+                  );
+                }
+                else if(name.sname=='Structural Design (Concrete)')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Sdc()),
+                  );
+                }
+                else if(name.sname=='Advanced Water Resource Engineering')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => We()),
+                  );
+                }
+                else if(name.sname=='Elective-I Remote Sensing and GIS')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Rsg()),
+                  );
+                }
+                else
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => project()),
+                  );
+                }
+
+              },
+            ),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("cse:year4:sem1"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Cvl4sem2 extends StatefulWidget {
+  @override
+  Cvl4sem2State createState() => Cvl4sem2State();
+}
+class Cvl4sem2State extends State<Cvl4sem2> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: cv4s2.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            Text(name.sname),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Cvl:year4:sem2"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}

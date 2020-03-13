@@ -1,0 +1,254 @@
+import 'package:flutter/material.dart';
+import 'package:info_app/subs/subjects';
+
+
+class p1s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  p1s1({this.cno, this.sname, this.credits});
+}
+var P1s1=<p1s1>[
+  p1s1(cno:'EN111',sname: 'English',credits:'3'),
+  p1s1(cno:'TE112/SN112',sname: 'Telugu/Sanskrit',credits:'2'),
+  p1s1(cno:'MA113',sname: 'Mathematics',credits: '5'),
+  p1s1(cno:'PH114',sname: 'Physics',credits: '3'),
+p1s1(cno:'CY115',sname: 'Chemistry',credits: '3'),
+p1s1(cno:'CS116',sname: 'Basics in IT',credits: '0'),
+
+p1s1(cno:'PH701',sname: 'Physics Lab',credits: '0'),
+p1s1(cno:'CY701',sname: 'Chemistry Lab',credits: '0'),
+ 
+];
+class p1s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  p1s2({this.cno, this.sname, this.credits});
+}
+var P1s2=<p1s2>[
+  p1s2(cno:'EN121',sname: 'English',credits:'3'),
+  p1s2(cno:'TE122/SN122',sname: 'telugu/sanskrit',credits:'2'),
+  p1s2(cno:'MA123',sname: 'Mathematics',credits: '5'),
+  p1s2(cno:'PH124',sname: 'Physics',credits: '3'),
+  p1s2(cno:'CY125',sname: 'Chemistry',credits: '3'),
+  p1s2(cno:'CS126',sname: 'Flow charts and algorithms',credits: '0'),
+
+  p1s2(cno:'PH701',sname: 'Physics lab',credits: '2'),
+  p1s2(cno:'CY701',sname: 'Chemistry Lab',credits: '2'),
+
+];
+class p1sem1 extends StatefulWidget {
+  @override
+  p1sem1State createState() => p1sem1State();
+}
+class p1sem1State extends State<p1sem1> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+          //      DataColumn(label: Text('Credits'),
+          //        numeric: true,
+          //      ),
+        ],
+        rows: P1s1.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            GestureDetector(
+              child: Text(name.sname, style: TextStyle(decoration: TextDecoration.underline, color: Colors.brown)),
+              onTap: () {
+                if(name.sname=='English')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => p1s1eng()),
+                  );
+                }
+                else if(name.sname=='Telugu/Sanskrit')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => p1s1tel()),
+                  );
+                }
+                else if(name.sname=='Mathematics')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => p1s1mat()),
+                  );
+                }
+                else if(name.sname=='Physics')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) =>p1s1phy()),
+                  );
+                }
+                else if(name.sname=='Chemistry')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) =>p1s1chem()),
+                  );
+                }
+                else if(name.sname=='Basics in IT')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => p1s1it()),
+                  );
+                }
+                else if(name.sname=='Physics Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => p1s1phylab()),
+                  );
+                }
+
+                else
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => p1s1chemlab()),
+                  );
+                }
+
+              },
+            ),
+          ),
+          //     DataCell(
+          //        Text(name.credits),
+          //      ),
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("puc:year1:sem1"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+class p1sem2 extends StatefulWidget {
+  @override
+  p1sem2State createState() => p1sem2State();
+}
+class p1sem2State extends State<p1sem2> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+          //      DataColumn(label: Text('Credits'),
+          //        numeric: true,
+          //      ),
+        ],
+        rows: P1s2.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            GestureDetector(
+              child: Text(name.sname, style: TextStyle(decoration: TextDecoration.underline, color: Colors.brown)),
+              onTap: () {
+                if(name.sname=='English')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => p1s2eng()),
+                  );
+                }
+                else if(name.sname=='Telugu/Sanskrit')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => p1s2tel()),
+                  );
+                }
+                else if(name.sname=='Mathematics')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => p1s2mat()),
+                  );
+                }
+                else if(name.sname=='Physics')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) =>p1s2phy()),
+                  );
+                }
+                else if(name.sname=='Chemistry')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) =>p1s2chem()),
+                  );
+                }
+                else if(name.sname=='Flow charts and algorithms')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => p1s2algo()),
+                  );
+                }
+                else if(name.sname=='Physics Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => p1s2phylab()),
+                  );
+                }
+
+                else
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => p1s2chemlab()),
+                  );
+                }
+
+              },
+            ),
+          ),
+          //     DataCell(
+          //        Text(name.credits),
+          //      ),
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("puc:year1:sem2"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}

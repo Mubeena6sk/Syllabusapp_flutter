@@ -1,0 +1,893 @@
+import 'package:flutter/material.dart';
+import 'package:info_app/subs/subjects';
+
+class Ece1sem1 extends StatefulWidget {
+  @override
+  Ece1sem1State createState() => Ece1sem1State();
+}
+class Ece1sem1State extends State<Ece1sem1> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+        ],
+        rows: ec1s1.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            GestureDetector(
+              child: Text(name.sname, style: TextStyle(decoration: TextDecoration.underline, color: Colors.brown)),
+              onTap: () {
+                if(name.sname=='Programming in C') {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => C()),
+                  );
+                }
+                else if(name.sname=='Engineering Physics')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Chem()),
+                  );
+                }
+                else if(name.sname=='Mathematics-1')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => M1()),
+                  );
+                }
+                else if(name.sname=='Network Analysis Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Nalab()),
+                  );
+                }
+                else if(name.sname=='Network Analysis')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Na()),
+                  );
+                }
+                else if(name.sname=='Communication Skills-I')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Cs1()),
+                  );
+                }
+                else if(name.sname=='Programming in C Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Clab()),
+                  );
+                }
+                else
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Phylab()),
+                  );
+                }
+              },
+            ),
+          ),
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("ece:year1:sem1"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Ece1sem2 extends StatefulWidget {
+  @override
+  Ece1sem2State createState() => Ece1sem2State();
+}
+class Ece1sem2State extends State<Ece1sem2> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+      //    DataColumn(label: Text('Credits'),
+      //      numeric: true,
+      //    ),
+        ],
+        rows: ec1s2.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            GestureDetector(
+              child: Text(name.sname, style: TextStyle(decoration: TextDecoration.underline, color: Colors.brown)),
+              onTap: () {
+                if(name.sname=='Electrical technology')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Et()),
+                  );
+                }
+                else if(name.sname=='Engineering Chemistry')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Chem()),
+                  );
+                }
+                else if(name.sname=='Mathematics-2')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => M2()),
+                  );
+                }
+                else if(name.sname=='Scripting Languages')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Sl()),
+                  );
+                }
+                else if(name.sname=='Communication Skills- II')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Cs2()),
+                  );
+                }
+                else if(name.sname=='Engineering Drawing')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Ed()),
+                  );
+                }
+                else if(name.sname=='Electrical Technology Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Etlab()),
+                  );
+                }
+                else if(name.sname=='English For Communication Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Englab()),
+                  );
+                }
+                else
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Chemlab()),
+                  );
+                }
+              },
+            ),
+          ),
+        //  DataCell(
+          //  Text(name.credits),
+          //),
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("ece:year1:sem2"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Ece2sem1 extends StatefulWidget {
+  @override
+  Ece2sem1State createState() => Ece2sem1State();
+}
+class Ece2sem1State extends State<Ece2sem1> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: ec2s1.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            GestureDetector(
+              child: Text(name.sname, style: TextStyle(decoration: TextDecoration.underline, color: Colors.brown)),
+              onTap: () {
+                if(name.sname=='Electronic Circuits')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Ec()),
+                  );
+                }
+                else if(name.sname=='Semiconductor Devices')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Sd()),
+                  );
+                }
+                else if(name.sname=='Signals and Systems')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Sas()),
+                  );
+                }
+                else if(name.sname=='Electromagnetic theory')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Emt()),
+                  );
+                }
+                else if(name.sname=='Environmental Science')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Es()),
+                  );
+                }
+                else if(name.sname=='Soft Skills - I')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Ss1()),
+                  );
+                }
+                else if(name.sname=='Electronic Circuits Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Eclab()),
+                  );
+                }
+                else if(name.sname=='Semiconductor Devices Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Sdlab()),
+                  );
+                }
+                else
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Seminar1()),
+                  );
+                }
+              },
+            ),
+          ),
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("ece:year2:sem1"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Ece2sem2 extends StatefulWidget {
+  @override
+  Ece2sem2State createState() => Ece2sem2State();
+}
+class Ece2sem2State extends State<Ece2sem2> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: ec2s2.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            GestureDetector(
+              child: Text(name.sname, style: TextStyle(decoration: TextDecoration.underline, color: Colors.brown)),
+              onTap: () {
+                if(name.sname=='Analog electronic Circuits')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) =>Ac()),
+                  );
+                }
+                else if(name.sname=='Digital Electronic Circuits')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Dc()),
+                  );
+                }
+
+                else if(name.sname=='Linear Control System Engineering')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Lce()),
+                  );
+                }
+                else if(name.sname=='Probability and Stochastic Processes')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Psplab()),
+                  );
+                }
+                else if(name.sname=='Computer Organization & Architecture')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Coa()),
+                  );
+                }
+                else if(name.sname=='PERSONALITY DEVELOPMENT 1')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Pd1()),
+                  );
+                }
+                else if(name.sname=='Analog Electronic Circuits Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Aclab()),
+                  );
+                }
+                else if(name.sname=='Digital Electronic Circuits Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Dclab()),
+                  );
+                }
+                else if(name.sname=='Computer Organization & Architecture Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Coalab()),
+                  );
+                }
+                else
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Seminar2()),
+                  );
+                }
+              },
+            ),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("ece:year2:sem2"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Ece3sem1 extends StatefulWidget {
+  @override
+  Ece3sem1State createState() => Ece3sem1State();
+}
+class Ece3sem1State extends State<Ece3sem1> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: ec3s1.map((name) =>
+            DataRow(cells: [
+              DataCell(
+                Text(name.cno),
+              ),
+              DataCell(
+                GestureDetector(
+                  child: Text(name.sname, style: TextStyle(
+                      decoration: TextDecoration.underline,
+                      color: Colors.brown)),
+                  onTap: () {
+                    if (name.sname == 'Analog communications') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Acomm()),
+                      );
+                    }
+                    else if (name.sname == 'RF and Microwave Engineering') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Rf()),
+                      );
+                    }
+                    else if (name.sname == 'Digital Signal Processing') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Dp()),
+                      );
+                    }
+                    else if (name.sname == 'VLSI Engineering') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Ve()),
+                      );
+                    }
+                    else if (name.sname ==
+                        'Managerial Economics and Financial Analysis') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Mefa()),
+                      );
+                    }
+                    else if (name.sname == 'Personality Development II') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Pd2()),
+                      );
+                    }
+                    else if (name.sname == 'Analog communications Lab') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Acommlab()),
+                      );
+                    }
+                    else if (name.sname == 'RF and Microwave Engineering Lab') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Rflab()),
+                      );
+                    }
+                    else if (name.sname == 'Digital Signal Processing Lab') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Dplab()),
+                      );
+                    }
+                    else {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Seminar2()),
+                      );
+                    }
+                  },
+                ),
+              ),
+
+            ],),).toList(),),);
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("ece:year3:sem1"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Ece3sem2 extends StatefulWidget {
+  @override
+  Ece3sem2State createState() => Ece3sem2State();
+}
+class Ece3sem2State extends State<Ece3sem2> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: ec3s2.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            GestureDetector(
+              child: Text(name.sname, style: TextStyle(decoration: TextDecoration.underline, color: Colors.brown)),
+              onTap: () {
+                if(name.sname=='Digital Communications')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Dcomm()),
+                  );
+                }
+                else if(name.sname=='Digital System Design')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Dsd()),
+                  );
+                }
+                else if(name.sname=='Microprocessors & Interfacing')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Mi()),
+                  );
+                }
+                else if(name.sname=='Object Oriented Programming through Java')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Oop()),
+                  );
+                }
+                else if(name.sname=='Computer Networks')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Cn()),
+                  );
+                }
+                else if(name.sname=='Soft Skills II')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Ss2()),
+                  );
+                }
+                else if(name.sname=='Digital Communications Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Dclab()),
+                  );
+                }
+                else if(name.sname=='Digital System Design Lab')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Dsdlab()),
+                  );
+                }
+                else if(name.sname=='OBJECTED ORIENTED PROGRAMMING LAB')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Ooplab()),
+                  );
+                }
+                else if(name.sname=='Comprehensive Viva-I')
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Cv1()),
+                  );
+                }
+                else
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Seminar3()),
+                  );
+                }
+              },
+            ),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("ece:year3:sem2"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Ece4sem1 extends StatefulWidget {
+  @override
+  Ece4sem1State createState() => Ece4sem1State();
+}
+class Ece4sem1State extends State<Ece4sem1> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+
+        ],
+        rows: ec4s1.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            Text(name.sname),
+          ),
+
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("ece:year4:sem1"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Ece4sem2 extends StatefulWidget {
+  @override
+  Ece4sem2State createState() => Ece4sem2State();
+}
+class Ece4sem2State extends State<Ece4sem2> {
+  SingleChildScrollView dataBody() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: DataTable(
+        columns: <DataColumn>[
+          DataColumn(label: Text('Course.no'),
+            numeric: false,
+          ),
+          DataColumn(label: Text('Subject name'),
+            numeric: false,
+          ),
+        ],
+        rows: ec4s2.map((name)=>DataRow(cells: [
+          DataCell(
+            Text(name.cno),
+          ),
+          DataCell(
+            Text(name.sname),
+          ),
+        ],),).toList(),),);}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("ece:year4:sem2"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Container(
+        child: dataBody(),
+      ),
+    );
+  }
+}
+
+class Ec1s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  Ec1s1({this.cno, this.sname, this.credits});
+}
+var ec1s1=<Ec1s1>[
+  Ec1s1(cno:'CS1101',sname: 'Programming in C',credits:'4'),
+  Ec1s1(cno:'PH1001',sname: 'Engineering Physics',credits:'4'),
+  Ec1s1(cno:'MA1101',sname: 'Mathematics-1',credits: '4'),
+  Ec1s1(cno:'HS1001',sname: 'English for Communication',credits: '3'),
+  Ec1s1(cno:'EC1101',sname: 'Network Analysis',credits: '4'),
+  Ec1s1(cno:'EC1101',sname: 'Network Analysis Lab',credits: '2'),
+  Ec1s1(cno:'HS1101',sname: 'Communication Skills-1',credits: '2'),
+  Ec1s1(cno:'CS1701',sname: 'Programming in C Lab',credits: '2'),
+  Ec1s1(cno:'CY1601',sname: 'Physics Lab',credits: '2'),
+];
+class Ec1s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  Ec1s2({this.cno, this.sname, this.credits});
+}
+var ec1s2=<Ec1s2>[
+  Ec1s2(cno:'EE1201',sname: 'Electrical technology',credits:'4'),
+  Ec1s2(cno:'CY1001',sname: 'Engineering Chemistry',credits:'4'),
+  Ec1s2(cno:'MA1201',sname: 'Mathematics-2',credits: '4'),
+  Ec1s2(cno:'CS1201',sname: 'Scripting Languages',credits: '3'),
+  Ec1s2(cno:'HS1201',sname: 'Communication Skills- II',credits: '1'),
+  Ec1s2(cno:'CE1601',sname: 'Engineering Drawing',credits: '4'),
+  Ec1s2(cno:'EE1801',sname: 'Electrical Technology Lab',credits: '4'),
+  Ec1s2(cno:'HS1601',sname: 'English For Communication Lab',credits: '2'),
+  Ec1s2(cno:'CY1601',sname: 'Engineering Chemistry Laboratory',credits: '2'),
+];
+class Ec2s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  Ec2s1({this.cno, this.sname, this.credits});
+}
+var ec2s1=<Ec2s1>[
+  Ec2s1(cno:'EC2101',sname: 'Electronic Circuits',credits:'4'),
+  Ec2s1(cno:'EC2102',sname: 'Semiconductor Devices',credits:'4'),
+  Ec2s1(cno:'EC2103',sname: 'Signals and Systems',credits: '4'),
+  Ec2s1(cno:'EC2104',sname: 'Electromagnetic theory',credits: '4'),
+  Ec2s1(cno:'BSBE2001/3001',sname: 'Environmental Science',credits: '3'),
+  Ec2s1(cno:'HS2101',sname: 'Soft Skills - I',credits: '1'),
+  Ec2s1(cno:'EC2701',sname: 'Electronic Circuits Lab',credits: '2'),
+  Ec2s1(cno:'EC2702',sname: 'Semiconductor Devices Lab',credits: '2'),
+  Ec2s1(cno:'EC2901',sname: 'Seminar-I',credits: '1'),
+];
+class Ec2s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  Ec2s2({this.cno, this.sname, this.credits});
+}
+var ec2s2=<Ec2s2>[
+  Ec2s2(cno:'EC2201',sname: 'Analog electronic Circuits',credits:'4'),
+  Ec2s2(cno:'EC2202',sname: 'Digital Electronic Circuits',credits:'4'),
+  Ec2s2(cno:'EE2202',sname: 'Linear Control System Engineering',credits: '4'),
+  Ec2s2(cno:'MA2203',sname: 'Probability & Stochastic Process',credits: '4'),
+  Ec2s2(cno:'CS2201',sname: 'Computer Org.& Architecture',credits: '4'),
+  Ec2s2(cno:'BM2201',sname: 'PERSONALITY DEVELOPMENT 1',credits: '1'),
+  Ec2s2(cno:'EC2801',sname: 'Analog Electronic Circuits Lab',credits: '2'),
+  Ec2s2(cno:'EC2802',sname: 'Digital Electronic Circuits Lab',credits: '2'),
+  Ec2s2(cno:'CS2801',sname: 'Computer Organization & Architecture Lab',credits: '2'),
+  Ec2s2(cno:'EC2902',sname: 'Seminar - II',credits: '1'),
+];
+class Ec3s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  Ec3s1({this.cno, this.sname, this.credits});
+}
+var ec3s1=<Ec3s1>[
+  Ec3s1(cno:'EC3101',sname: 'Analog communications',credits:'4'),
+  Ec3s1(cno:'EC3102',sname: 'RF and Microwave Engineering',credits:'4'),
+  Ec3s1(cno:'EC3103',sname: 'Digital Signal Processing',credits: '4'),
+  Ec3s1(cno:'EC3104',sname: 'VLSI Engineering',credits: '4'),
+  Ec3s1(cno:'BM3001/4001',sname: 'Managerial Economics and Financial Analysis',credits: '3'),
+  Ec3s1(cno:'BM3101',sname: 'Personality Development II',credits: '1'),
+  Ec3s1(cno:'EC3701',sname: 'Analog communications Lab',credits: '2'),
+  Ec3s1(cno:'EC3702',sname: 'RF and Microwave Engineering Lab',credits: '2'),
+  Ec3s1(cno:'EC3703',sname: 'Digital Signal Processing Lab',credits: '2'),
+  Ec3s1(cno:'EC3901',sname: 'Seminar-II',credits: '1'),
+];
+class Ec3s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  Ec3s2({this.cno, this.sname, this.credits});
+}
+var ec3s2=<Ec3s2>[
+  Ec3s2(cno:'EC3201',sname: 'Digital Communications',credits:'4'),
+  Ec3s2(cno:'EC3202',sname: 'Digital System Design',credits:'4'),
+  Ec3s2(cno:'EC3203',sname: 'Microprocessors & Interfacing',credits: '4'),
+  Ec3s2(cno:'CS3001',sname: 'Object Oriented Programming through Java',credits: '4'),
+  Ec3s2(cno:'CS3204',sname: 'Computer Networks',credits: '4'),
+  Ec3s2(cno:'HS3201',sname: 'Soft Skills II',credits: '1'),
+  Ec3s2(cno:'EC3801',sname: 'Digital Communications Lab',credits: '2'),
+  Ec3s2(cno:'EC3802',sname: 'Digital System Design Lab',credits: '2'),
+  Ec3s2(cno:'CS3601',sname: 'OBJECTED ORIENTED PROGRAMMING LAB',credits: '2'),
+  Ec3s2(cno:'EC3000',sname: '	Comprehensive Viva-I',credits: '1'),
+  Ec3s2(cno:'EC3902',sname: 'Seminar - III',credits: '1'),
+];
+class Ec4s1 {
+  String cno;
+  String sname;
+  String credits;
+
+  Ec4s1({this.cno, this.sname, this.credits});
+}
+var ec4s1=<Ec4s1>[
+  Ec4s1(cno:'EC3900',sname: 'Internship',credits:'6'),
+  Ec4s1(cno:'EC44XX',sname: 'Elective-I',credits:'3'),
+  Ec4s1(cno:'EC44XX',sname: 'Elective-II',credits: '3'),
+  Ec4s1(cno:'EC44XX',sname: '	Elective-III',credits: '3'),
+  Ec4s1(cno:'EC44XX',sname: '	Elective-IV',credits: '3'),
+  Ec4s1(cno:'EC4701',sname: 'Wireless Communications',credits: '2'),
+  Ec4s1(cno:'EC4702',sname: '	VLSI Lab',credits: '2'),
+
+];
+class Ec4s2 {
+  String cno;
+  String sname;
+  String credits;
+
+  Ec4s2({this.cno, this.sname, this.credits});
+}
+var ec4s2=<Ec4s2>[
+  Ec4s2(cno:'-',sname: 'Free Elective-II',credits:'3'),
+  Ec4s2(cno:'EC4000',sname: 'Comprehensive Viva',credits:'1'),
+  Ec4s2(cno:'	EC4800',sname: 'Project',credits: '16'),
+
+];
+
+
+
